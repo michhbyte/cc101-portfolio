@@ -1,0 +1,144 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fdceff;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+header {
+    background: linear-gradient(135deg, #cd56d6 0%, #bb2bac 100%);
+    color: rgb(249, 193, 161);
+    padding: 1.5rem 5%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.site-title {
+    font-size: 2.1rem;
+    margin-bottom: 0.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: #5698d5;
+    text-decoration: none;
+    font-weight: 650;
+    font-size: 500;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(244, 159, 61);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 5%;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    color: #c86bac;
+    border-bottom: 3px solid #dd84d6;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.card h3 {
+    color: #2c5282;
+    margin: 1rem 0 0.5rem;
+}
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 4px solid #d60d82;
+    border-radius: 50%;
+    
+}
+
+.text-block p {
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+
+.code-container {
+    background-color: #f7fafc;
+    border-left: 4px solid #dd468f;
+    padding: 1.2rem;
+    overflow-x: auto;
+    margin-top: 1rem;
+    border-radius: 6px;
+}
+
+pre {
+    color: #2d3748;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #c63c9a;
+    color: rgb(26, 91, 138);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    .flex-container {
+        justify-content: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio — JPCS Inc. Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <header>
+        <h1 class="site-title">My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#personal">Personal Info</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#javacode">Java Code</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section A: Personal Information -->
+        <section id="personal" class="card">
+            <h2>👤 Personal Information</h2>
+            <div class="flex-container">
+                <img src="f9524781-c954-4927-91c6-30d101567255.jpg"  class="profile-img">
+		<div class="text-block"> 
+                    <p><strong>Full Name:</strong> Princess Michelle F. Espiritu</p>
+                    <p><strong>Email:</strong> princessmichelle162@gmail.com</p>
+                    <p><strong>Contact:</strong> 0944715982</p>
+                    <p><strong>Location:</strong> Guimba, Nueva Ecija</p>
+                    <h3>About Me</h3>
+                    <p>I am a dedicated first-year IT student at Olscho, I'm studying hard to be a good programmer in the future, I have a unique personality. I never give up easy on something I really want to achieve, I have clear goals and committed on my dreams</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section B: Educational Background -->
+        <section id="education" class="card">
+            <h2>🎓 Educational Background</h2>
+            <ul>
+                <li>
+                    <strong>College — Bachelor of Science in Information Technology</strong><br>
+                    Our Lady of Sacred Heart of Guimba<br>
+                    <em>2025 – Present</em>
+                </li>
+                <li>
+                    <strong>Senior High School — Accountancy Business and Management(ABM)</strong><br>
+                   Bonifacio Luz Natividad Educational Foundatioin Inc.<br>
+                    <em>2023 – 2025</em>
+                </li>
+                <li>
+                    <strong>Junior High School</strong><br>
+                    Bartolome Sangalang National High School<br>
+                    <em>2019 – 2023</em>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Section C: Skills -->
+        <section id="skills" class="card">
+            <h2>💻 Technical Skills</h2>
+            <h3>Programming & Development</h3>
+            <p>✅ Java (Console-Based Applications & Games)<br>
+               ✅ HTML5 — Page Structure & Semantic Elements<br>
+               ✅ CSS3 — Styling, Layout & Responsive Design<br>
+               ✅ Basic Problem Solving & Logic Development</p>
+
+            <h3>Tools & Competencies</h3>
+            <p>✅ VS Code<br>
+               ✅ GitHub — Version Control<br>
+               ✅ Debugging & Testing Code<br>
+               ✅ Written & Verbal Communication</p>
+        </section>
+
+        <!-- Section D: Java Code -->
+        <section id="javacode" class="card">
+            <h2>☕ CC102 Final Performance Task — Java Source Code</h2>
+            <p><em>Below is the complete source code of my console-based game developed in CC102:</em></p>
+            <div class="code-container">
+<pre>
+// =============================================
+// PROGRAM NAME: Number Guessing Game
+// STUDENT NAME: [Your Name]
+// DATE: November 2026
+// CC102 Final Performance Task
+// =============================================
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class NumberGuessingGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        
+        int secretNumber = random.nextInt(100) + 1;
+        int userGuess = 0;
+        int attempts = 0;
+        final int MAX_ATTEMPTS = 7;
+        
+        System.out.println("========================================");
+        System.out.println("      🎮 NUMBER GUESSING GAME 🎮      ");
+        System.out.println("========================================");
+        System.out.println("I am thinking of a number between 1 and 100.");
+        System.out.println("You have " + MAX_ATTEMPTS + " attempts to guess it correctly!\n");
+        
+        while (userGuess != secretNumber && attempts < MAX_ATTEMPTS) {
+            System.out.print("Enter your guess: ");
+            
+            if (!scanner.hasNextInt()) {
+                System.out.println("⚠️ Please enter a valid number!\n");
+                scanner.next();
+                continue;
+            }
+            
+            userGuess = scanner.nextInt();
+            attempts++;
+            
+            if (userGuess < secretNumber) {
+                System.out.println("📉 Too low! Try again.\n");
+            } else if (userGuess > secretNumber) {
+                System.out.println("📈 Too high! Try again.\n");
+            }
+        }
+        
+        if (userGuess == secretNumber) {
+            System.out.println("🎉 CONGRATULATIONS! You guessed the number!");
+            System.out.println("✅ It took you " + attempts + " attempt(s).");
+        } else {
+            System.out.println("😞 Game Over! You've used all " + MAX_ATTEMPTS + " attempts.");
+            System.out.println("🔑 The secret number was: " + secretNumber);
+        }
+        
+        System.out.println("\nThank you for playing! Goodbye.");
+        scanner.close();
+    }
+}
+</pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Princess Michelle F. Espiritu | Portfolio for JPCS Inc. Junior Programmer Application</p>
+    </footer>
+</body>
+</html>
+
